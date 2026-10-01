@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Basics Quiz Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Week 2 Combined Demo</p>
+        <h1>Web Basics Quiz</h1>
+        <p class="hero-copy">
+          A compact quiz that blends HTML structure, CSS styling, and JavaScript
+          interactions into one live-codable lesson.
+        </p>
+
+        <!-- TEMPLATE POINT 1: Change the intro text, title, or badge labels to match your own lesson theme. -->
+        <div class="hero-badges" aria-label="Lesson topics">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </header>
+
+      <main class="quiz-layout">
+        <section class="quiz-card" aria-labelledby="quiz-title">
+          <div class="quiz-topbar">
+            <div>
+              <p class="label">Current Question</p>
+              <h2 id="quiz-title">Question 1 of 4</h2>
+            </div>
+            <div class="score-pill" id="score-pill">Score: 0</div>
+          </div>
+
+          <p class="progress-text" id="progress-text">Answer a question to move through the quiz.</p>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+
+          <!-- TEMPLATE POINT 2: This quiz stage is where the question text and answer choices are rendered. -->
+          <form class="quiz-form" id="quiz-form">
+            <fieldset class="question-block" id="question-block">
+              <legend class="sr-only">Quiz question</legend>
+              <h3 id="question-text">Loading question...</h3>
+              <p class="question-help" id="question-help">
+                Choose one answer to continue.
+              </p>
+              <div class="choices" id="choices"></div>
+            </fieldset>
+
+            <div class="feedback" id="feedback" aria-live="polite"></div>
+
+            <div class="actions">
+              <button type="button" class="secondary-button" id="reset-button" hidden>
+                Restart Quiz
+              </button>
+              <button type="button" class="primary-button" id="next-button" disabled>
+                Check Answer
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="lesson-notes">
+          <section class="notes-card">
+            <h2>How This Demo Breaks Down</h2>
+            <ol>
+              <li>Build the HTML shell and quiz card.</li>
+              <li>Add the CSS theme, layout, and answer states.</li>
+              <li>Use JavaScript to render questions and score answers.</li>
+              <li>Finish with restart logic and a result screen.</li>
+            </ol>
+          </section>
+
+          <section class="notes-card accent-card">
+            <h2>What Students Should Notice</h2>
+            <ul>
+              <li>HTML gives the page structure and semantics.</li>
+              <li>CSS controls layout, spacing, and visual states.</li>
+              <li>JavaScript handles the quiz logic and user interaction.</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <!-- TEMPLATE POINT 3: If you want a shorter or longer lesson, edit the questions array in script.js. -->
+    <script src="script.js"></script>
+  </body>
+</html>
