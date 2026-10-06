@@ -17,11 +17,8 @@
           interactions into one live-codable lesson.
         </p>
 
-        <!-- TEMPLATE POINT 1: Change the intro text, title, or badge labels to match your own lesson theme. -->
         <div class="hero-badges" aria-label="Lesson topics">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
+          <!-- TEMPLATE POINT 1: Introduce the technologies used in this lesson. -->
         </div>
       </header>
 
@@ -40,16 +37,15 @@
             <div class="progress-fill" id="progress-fill"></div>
           </div>
 
-          <!-- TEMPLATE POINT 2: This quiz stage is where the question text and answer choices are rendered. -->
+          <!-- TEMPLATE POINT 2: Give the question and answer choices semantic grouping. -->
           <form class="quiz-form" id="quiz-form">
-            <fieldset class="question-block" id="question-block">
-              <legend class="sr-only">Quiz question</legend>
+            <div class="question-block" id="question-block">
               <h3 id="question-text">Loading question...</h3>
               <p class="question-help" id="question-help">
                 Choose one answer to continue.
               </p>
               <div class="choices" id="choices"></div>
-            </fieldset>
+            </div>
 
             <div class="feedback" id="feedback" aria-live="polite"></div>
 
@@ -87,7 +83,6 @@
       </main>
     </div>
 
-    <!-- TEMPLATE POINT 3: If you want a shorter or longer lesson, edit the questions array in script.js. -->
-    <script src="script.js"></script>
+    <!-- TEMPLATE POINT 3: Connect the page to its quiz behavior. -->
   </body>
 </html>

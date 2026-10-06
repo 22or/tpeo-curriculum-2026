@@ -88,9 +88,7 @@ body {
 }
 
 .quiz-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.85fr);
-  gap: 22px;
+  /* TEMPLATE POINT 4: Arrange the quiz and lesson notes in a responsive layout. */
   align-items: start;
 }
 
@@ -376,5 +374,3 @@ body {
     width: 100%;
   }
 }
-
-/* TEMPLATE POINT 4: Swap the theme colors, fonts, or card spacing here if you want a different classroom style. */

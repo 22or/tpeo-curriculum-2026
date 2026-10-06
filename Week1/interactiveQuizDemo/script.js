@@ -29,7 +29,7 @@ const questions = [
   },
 ];
 
-// TEMPLATE POINT 5: Shorten or expand the demo by editing this array.
+// TEMPLATE POINT 5: Explore how question data drives the quiz.
 
 const quizTitle = document.getElementById("quiz-title");
 const progressText = document.getElementById("progress-text");
@@ -87,14 +87,7 @@ function renderQuestion() {
 }
 
 function handleSelection(event) {
-  if (questionLocked) {
-    return;
-  }
-
-  selectedAnswerIndex = Number(event.target.value);
-  nextButton.disabled = false;
-  feedback.textContent = "Now check your answer.";
-  feedback.className = "feedback";
+  // TEMPLATE POINT 7: Respond to an answer selection and prepare it to be checked.
 }
 
 function lockChoices() {
@@ -166,17 +159,10 @@ function handlePrimaryAction() {
 }
 
 function restartQuiz() {
-  currentQuestionIndex = 0;
-  score = 0;
-  selectedAnswerIndex = null;
-  questionLocked = false;
-  nextButton.hidden = false;
-  renderQuestion();
+  // TEMPLATE POINT 8: Return the quiz to its starting state.
 }
 
-// TEMPLATE POINT 6: This is the main event wiring section if you want students to build the behavior live.
-nextButton.addEventListener("click", handlePrimaryAction);
-resetButton.addEventListener("click", restartQuiz);
+// TEMPLATE POINT 6: Connect the quiz controls to their behavior.
 quizForm.addEventListener("submit", (event) => event.preventDefault());
 
 renderQuestion();
