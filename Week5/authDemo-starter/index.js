@@ -103,7 +103,8 @@ app.delete("/api/tweets", authMiddleware, async (req, res) => {
 
 // TODO: Hash passwords with PBKDF2 before storing or comparing them.
 const hashPassword = (password) => {
-  return password;
+	const key = pbkdf2.pbkdf2Sync(password,SALT,1000,64,'sha512');
+	return key.toString('hex');
 };
 
 app.post("/register", async (req, res) => {
